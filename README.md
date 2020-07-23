@@ -1,2 +1,2 @@
-# ayce---main
+# ayce
 Main site for ayce
