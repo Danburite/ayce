@@ -127,18 +127,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\bootstrap-theme.css" />
-    <Content Include="Assets\bootstrap-theme.min.css" />
-    <Content Include="Assets\bootstrap.css" />
-    <Content Include="Assets\bootstrap.min.css" />
+    <Content Include="Assets\Styles\bootstrap-theme.css" />
+    <Content Include="Assets\Styles\bootstrap-theme.min.css" />
+    <Content Include="Assets\Styles\bootstrap.css" />
+    <Content Include="Assets\Styles\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Assets\Site.css" />
+    <Content Include="Assets\Styles\Site.css" />
     <Content Include="Assets\Scripts\bootstrap.js" />
     <Content Include="Assets\Scripts\bootstrap.min.js" />
     <None Include="Assets\Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Assets\foundation.css" />
+    <Content Include="Assets\Styles\foundation.css" />
     <Content Include="Assets\Scripts\foundation.js" />
     <Content Include="Assets\Scripts\jquery-3.4.1.js" />
     <Content Include="Assets\Scripts\jquery-3.4.1.min.js" />
@@ -168,7 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\Styles\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -176,10 +175,10 @@
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Assets\bootstrap.min.css.map" />
-    <Content Include="Assets\bootstrap.css.map" />
-    <Content Include="Assets\bootstrap-theme.min.css.map" />
-    <Content Include="Assets\bootstrap-theme.css.map" />
+    <Content Include="Assets\Styles\bootstrap.min.css.map" />
+    <Content Include="Assets\Styles\bootstrap.css.map" />
+    <Content Include="Assets\Styles\bootstrap-theme.min.css.map" />
+    <Content Include="Assets\Styles\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Assets\Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Assets\Scripts\jquery-3.4.1.min.map" />
