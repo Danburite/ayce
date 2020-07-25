@@ -127,6 +127,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\logo-90x90.png" />
     <Content Include="Assets\Styles\bootstrap-theme.css" />
     <Content Include="Assets\Styles\bootstrap-theme.min.css" />
     <Content Include="Assets\Styles\bootstrap.css" />
@@ -167,6 +168,7 @@
     <Content Include="Views\Shared\Partials\Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
