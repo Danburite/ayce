@@ -9,22 +9,22 @@ namespace ayce
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Assets/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+                        "~/Assets/Scripts/jquery.validate*"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                        "~/Assets/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
-                      "~/Scripts/foundation.js"));
+                      "~/Assets/Scripts/foundation.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/foundation.css",
-                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Assets/Styles/css").Include(
+                      "~/Assets/Styles/foundation.css",
+                      "~/Assets/Styles/site.css"));
         }
     }
 }
