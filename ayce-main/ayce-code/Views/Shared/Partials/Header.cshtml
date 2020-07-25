@@ -1,0 +1,19 @@
+﻿
+<nav class="navigation-bar top-bar">
+    <div class="navigation-main-name">
+        <span class="show-for-small-only">
+            <button class="menu-icon" type="button" data-toggle></button>
+        </span>
+        
+        @Html.ActionLink("ayce", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    </div>
+    <div class="topbar-responsive-links">
+        <div class="top-bar-right">
+            <ul class="menu simple vertical medium-horizontal">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
+    </div>
+</nav>
