@@ -128,24 +128,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\logo-90x90.png" />
-    <Content Include="Assets\Styles\Frameworks\bootstrap-theme.css" />
-    <Content Include="Assets\Styles\Frameworks\bootstrap-theme.min.css" />
-    <Content Include="Assets\Styles\Frameworks\bootstrap.css" />
-    <Content Include="Assets\Styles\Frameworks\bootstrap.min.css" />
+    <Content Include="Assets\Scripts\foundation-6.6.3.min.js">
+      <DependentUpon>foundation-6.6.3.js</DependentUpon>
+    </Content>
+    <Content Include="Assets\Styles\Frameworks\foundation-6.6.3.min.css">
+      <DependentUpon>foundation-6.6.3.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Assets\Styles\Site.css" />
-    <Content Include="Assets\Scripts\bootstrap.js" />
-    <Content Include="Assets\Scripts\bootstrap.min.js" />
-    <None Include="Assets\Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Assets\Styles\Frameworks\foundation.css" />
-    <Content Include="Assets\Scripts\foundation.js" />
+    <Content Include="Assets\Styles\Frameworks\foundation-6.6.3.css" />
+    <Content Include="Assets\Scripts\foundation-6.6.3.js" />
     <Content Include="Assets\Scripts\jquery-3.4.1.js" />
-    <Content Include="Assets\Scripts\jquery-3.4.1.min.js" />
-    <Content Include="Assets\Scripts\jquery-3.4.1.slim.js" />
-    <Content Include="Assets\Scripts\jquery-3.4.1.slim.min.js" />
-    <None Include="Assets\Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Assets\Scripts\jquery.validate.js" />
     <Content Include="Assets\Scripts\jquery.validate.min.js" />
     <Content Include="Assets\Scripts\jquery.validate.unobtrusive.js" />
@@ -177,13 +172,8 @@
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Assets\Styles\Frameworks\bootstrap.min.css.map" />
-    <Content Include="Assets\Styles\Frameworks\bootstrap.css.map" />
-    <Content Include="Assets\Styles\Frameworks\bootstrap-theme.min.css.map" />
-    <Content Include="Assets\Styles\Frameworks\bootstrap-theme.css.map" />
+    <None Include="bundleconfig.json" />
     <None Include="packages.config" />
-    <Content Include="Assets\Scripts\jquery-3.4.1.slim.min.map" />
-    <Content Include="Assets\Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

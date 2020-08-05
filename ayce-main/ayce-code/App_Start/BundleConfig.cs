@@ -20,10 +20,10 @@ namespace ayce
                         "~/Assets/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
-                      "~/Assets/Scripts/foundation.js"));
+                      "~/Assets/Scripts/foundation-6.6.3.min.js"));
 
             bundles.Add(new StyleBundle("~/Assets/Styles/css").Include(
-                      "~/Assets/Styles/Frameworks/foundation.css",
+                      "~/Assets/Styles/Frameworks/foundation-6.6.3.min.css",
                       "~/Assets/Styles/site.css"));
         }
     }
