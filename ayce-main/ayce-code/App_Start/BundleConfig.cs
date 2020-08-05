@@ -23,7 +23,7 @@ namespace ayce
                       "~/Assets/Scripts/foundation.js"));
 
             bundles.Add(new StyleBundle("~/Assets/Styles/css").Include(
-                      "~/Assets/Styles/foundation.css",
+                      "~/Assets/Styles/Frameworks/foundation.css",
                       "~/Assets/Styles/site.css"));
         }
     }
