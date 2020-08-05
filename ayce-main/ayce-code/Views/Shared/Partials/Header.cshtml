@@ -1,11 +1,15 @@
 ﻿
 <nav class="navigation-bar top-bar">
-    <div class="navigation-main-name top-bar-left">
-        <span class="show-for-small-only">
+    <div class="navigation-hamburger show-for-small-only">
+        <span>
             <button class="menu-icon" type="button" data-toggle></button>
         </span>
-        <img src="~/Assets/Images/logo-90x90.png"/>
-        @Html.ActionLink("ayce", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    </div>
+    <div class="navigation-main-name top-bar-left">
+        <a href="@HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority)">
+            <img class="logo-img" src="~/Assets/Images/logo-90x90.png" width="42" height="42"/>
+            <span class="site-title">ayce</span>
+        </a>
     </div>
     <div class="navigation-links top-bar-right topbar-responsive-links">
         <div class="top-bar-right">
