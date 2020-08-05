@@ -134,10 +134,15 @@
     <Content Include="Assets\Styles\Frameworks\foundation-6.6.3.min.css">
       <DependentUpon>foundation-6.6.3.css</DependentUpon>
     </Content>
+    <Content Include="Assets\Styles\Site.css">
+      <DependentUpon>Site.scss</DependentUpon>
+    </Content>
+    <Content Include="Assets\Styles\Site.min.css">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Assets\Styles\Site.css" />
     <Content Include="Assets\Styles\Frameworks\foundation-6.6.3.css" />
     <Content Include="Assets\Scripts\foundation-6.6.3.js" />
     <Content Include="Assets\Scripts\jquery-3.4.1.js" />
@@ -172,7 +177,14 @@
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\Styles\Site.scss" />
+    <Content Include="Assets\Styles\_Header.scss" />
+    <Content Include="Assets\Styles\_Colors.scss" />
     <None Include="bundleconfig.json" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
