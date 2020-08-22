@@ -1,0 +1,20 @@
+[
+  {
+    "outputFileName": "Assets/Styles/Frameworks/foundation.min.css",
+    "inputFiles": [
+      "Assets/Styles/Frameworks/foundation.css"
+    ]
+  },
+  {
+    "outputFileName": "Assets/Scripts/foundation-6.6.3.min.js",
+    "inputFiles": [
+      "Assets/Scripts/foundation-6.6.3.js"
+    ]
+  },
+  {
+    "outputFileName": "Assets/Styles/Frameworks/foundation-6.6.3.min.css",
+    "inputFiles": [
+      "Assets/Styles/Frameworks/foundation-6.6.3.css"
+    ]
+  }
+]
