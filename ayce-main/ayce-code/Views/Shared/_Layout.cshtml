@@ -4,11 +4,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - ayce</title>
+    <!-- Start site styles -->
     @Styles.Render("~/Assets/Styles/css")
+    <!-- End site styles -->
+
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <!-- Start Navigation Top Bar View -->
     @Html.Partial("~/Views/Shared/Partials/Header.cshtml")
+    <!-- End Navigation Top Bar View -->
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -17,8 +22,22 @@
         </footer>
     </div>
 
+    <!-- Start jquery bundle -->
     @Scripts.Render("~/bundles/jquery")
+    <!-- End jquery bundle -->
+
+    <!-- Start Foundation Framework bundle -->
     @Scripts.Render("~/bundles/scripts")
+    <!-- End Foundation Framework bundle -->
+
+    <!-- Initialize Foundation Framework -->
+    <script>
+        $(document).foundation();
+    </script>
+    <!--End initializating Foundation Framework -->
+
+    <!-- Start section scripts -->
     @RenderSection("scripts", required: false)
+    <!-- End section scripts -->
 </body>
 </html>

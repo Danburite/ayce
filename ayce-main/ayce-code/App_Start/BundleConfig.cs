@@ -24,7 +24,7 @@ namespace ayce
 
             bundles.Add(new StyleBundle("~/Assets/Styles/css").Include(
                       "~/Assets/Styles/Frameworks/foundation-6.6.3.min.css",
-                      "~/Assets/Styles/site.css"));
+                      "~/Assets/Styles/Site.min.css"));
         }
     }
 }

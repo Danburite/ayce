@@ -1,22 +1,21 @@
 ﻿
-    <nav class="navigation-bar top-bar">
-        <div class="navigation-hamburger show-for-small-only">
-            <span>
-                <button class="menu-icon" type="button" data-toggle></button>
-            </span>
+<nav class="navigation-bar top-bar topbar-responsive">
+    <div class="top-bar-title">
+        <a class="topbar-responsive-logo" href="@HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority)">
+            <img class="logo-img" src="~/Assets/Images/logo-90x90.png" width="64" height="64" alt="ayce Logo"/>
+        </a>
+        <span class="show-for-small-only" data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="topbar-responsive"></button>
+        </span>
+    </div>
+    <div id="topbar-responsive" class="navigation-links topbar-responsive-links" >
+        <div class="top-bar-right" data-dropdown-menu>
+            <ul class="menu vertical medium-horizontal">
+                <li><a href="@HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority)">Home</a></li>
+                <li><a href="#">Explore</a></li> <!--@Html.ActionLink("Contact", "Contact", "Home")-->
+                <li><a href="#">Recommendations</a></li>
+                <li><a href="#">Decision</a></li>
+            </ul>
         </div>
-        <div class="navigation-main-name top-bar-left">
-            <a href="@HttpContext.Current.Request.Url.GetLeftPart(UriPartial.Authority)">
-                <img class="logo-img" src="~/Assets/Images/logo-90x90.png" width="64" height="64" />
-            </a>
-        </div>
-        <div class="navigation-links top-bar-right topbar-responsive-links show-for-medium">
-            <div class="navigation-links-container">
-                <ul class="menu simple vertical medium-horizontal">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    </div>
+</nav>

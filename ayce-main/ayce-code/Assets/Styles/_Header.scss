@@ -1,1 +1,82 @@
 ﻿
+.topbar-responsive {
+    background: $white;
+    padding: 1rem 1.5rem;
+    border-bottom-color: lighten($gray, 40%);
+    border-bottom-width: 0.0625rem;
+    border-bottom-style: solid;
+
+    .topbar-responsive-logo {
+        color: $white;
+        vertical-align: middle;
+    }
+
+    .menu {
+        background: $white;
+
+        li {
+            margin-left: 0.5rem;
+        }
+
+        a {
+            padding: 0.5rem;
+            border-radius: 0.75rem;
+            color: $primary-maroon;
+            transition: color 0.15s ease-in;
+
+            &:hover {
+                color: lighten($primary-maroon, 40%);
+                background: lighten($gray, 40%);
+            }
+
+            @media screen and (max-width: 39.9375em) {
+                padding: 0.875rem 0.5rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 39.9375em) {
+        padding: 0.75rem;
+
+        .top-bar-title {
+            position: relative;
+            width: 100%;
+
+            span {
+                position: absolute;
+                right: 0;
+                background: $primary-maroon;
+                border-radius: 5px;
+                padding: 0.25rem 0.45rem;
+                top: 50%;
+                transform: translateY(-50%);
+
+                &:hover {
+                    background: lighten($primary-maroon, 60%);
+                }
+
+                .menu-icon {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.topbar-responsive-links {
+    animation-fill-mode: both;
+    animation-duration: 0.5s;
+    width: 100%;
+    animation: fadeIn 1s ease-in;
+}
+
