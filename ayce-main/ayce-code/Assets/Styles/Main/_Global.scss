@@ -1,0 +1,87 @@
+﻿body{
+    font-family: $standard-font-family;
+    color: $black;
+    background-color: $white;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headline-font-family;
+    font-weight: $font-weight-bold;
+    text-align: center;
+}
+
+@media (max-width: 40em) {
+    h1 {
+        @include h1-small;
+    }
+    h2 {
+        @include h2-small;
+    }
+    h3 {
+        @include h3-small;
+    }
+    h4 {
+        @include h4-small;
+    }
+    h5 {
+        @include h5-small;
+    }
+    h6 {
+        @include h6-small;
+    }
+}
+
+@media (min-width: 40em) and (max-width: 64em) {
+    h1 {
+        @include h1-medium;
+    }
+
+    h2 {
+        @include h2-medium;
+    }
+
+    h3 {
+        @include h3-medium;
+    }
+
+    h4 {
+        @include h4-medium;
+    }
+
+    h5 {
+        @include h5-medium;
+    }
+
+    h6 {
+        @include h6-medium;
+    }
+}
+
+@media (min-width: 64em) {
+    h1 {
+        @include h1-large;
+    }
+
+    h2 {
+        @include h2-large;
+    }
+
+    h3 {
+        @include h3-large;
+    }
+
+    h4 {
+        @include h4-large;
+    }
+
+    h5 {
+        @include h5-large;
+    }
+
+    h6 {
+        @include h6-large;
+    }
+}
+

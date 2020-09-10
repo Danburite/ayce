@@ -17,25 +17,25 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - ayce</p>
-        </footer>
     </div>
+
+    <!-- Start Footer View-->
+    <footer>
+        <p>&copy; @DateTime.Now.Year - ayce</p>
+    </footer>
+    <!-- End Footer View-->
 
     <!-- Start jquery bundle -->
     @Scripts.Render("~/bundles/jquery")
     <!-- End jquery bundle -->
-
     <!-- Start Foundation Framework bundle -->
     @Scripts.Render("~/bundles/scripts")
     <!-- End Foundation Framework bundle -->
-
     <!-- Initialize Foundation Framework -->
     <script>
         $(document).foundation();
     </script>
     <!--End initializating Foundation Framework -->
-
     <!-- Start section scripts -->
     @RenderSection("scripts", required: false)
     <!-- End section scripts -->
