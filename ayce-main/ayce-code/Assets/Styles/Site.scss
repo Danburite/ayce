@@ -1,5 +1,9 @@
-﻿//Color Themes
-@import '_Colors.scss';
+﻿
+//Main styles
+@import 'Main/_Settings.scss';
+@import 'Main/_Mixins.scss';
+@import 'Main/_Global.scss';
+@import 'Main/_Header.scss';
 
-//Header Themes
-@import '_Header.scss';
+//Components
+@import 'Components/_Hero.scss';

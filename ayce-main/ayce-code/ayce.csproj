@@ -45,10 +45,49 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ButterCMS, Version=1.3.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ButterCMS.1.3.7\lib\net462\ButterCMS.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -67,8 +106,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http">
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
@@ -120,11 +157,17 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ButterCMSPageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Hero.cs" />
+    <Compile Include="Models\Components\Components.cs" />
+    <Compile Include="Models\Components\Seo.cs" />
+    <Compile Include="Models\Components\Recipe.cs" />
+    <Compile Include="Models\Components\CookingFeed.cs" />
+    <Compile Include="Models\Components\Hero.cs" />
+    <Compile Include="Models\Pages\DishPage.cs" />
+    <Compile Include="Models\Pages\MainPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -132,15 +175,18 @@
     <Content Include="Assets\Scripts\foundation-6.6.3.min.js">
       <DependentUpon>foundation-6.6.3.js</DependentUpon>
     </Content>
+    <None Include="Assets\Styles\Components\_Hero.scss" />
     <Content Include="Assets\Styles\Frameworks\foundation-6.6.3.min.css">
       <DependentUpon>foundation-6.6.3.css</DependentUpon>
     </Content>
+    <None Include="Assets\Styles\Main\_Mixins.scss" />
     <Content Include="Assets\Styles\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
     <Content Include="Assets\Styles\Site.min.css">
       <DependentUpon>Site.css</DependentUpon>
     </Content>
+    <None Include="Assets\Styles\Main\_Global.scss" />
     <Content Include="favicon.ico" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -163,9 +209,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\ButterCMSPage\Dish.cshtml" />
     <Content Include="Views\Shared\Partials\Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -178,14 +222,17 @@
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Assets\Fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Assets\Styles\Site.scss" />
-    <Content Include="Assets\Styles\_Header.scss" />
-    <Content Include="Assets\Styles\_Colors.scss" />
+    <Content Include="Assets\Styles\Main\_Header.scss" />
+    <Content Include="Assets\Styles\Main\_Settings.scss" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Compile Include="Models\Components\CuisineQuickMenu.cs" />
     <None Include="packages.config" />
+    <Content Include="Views\ButterCMSPage\Main.cshtml" />
+    <Content Include="Views\Shared\Components\Hero.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

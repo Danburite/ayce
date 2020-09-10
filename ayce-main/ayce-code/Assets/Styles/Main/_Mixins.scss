@@ -1,0 +1,91 @@
+﻿/**/
+
+@mixin h1-small {
+    font-size: 4rem;
+    line-height: 3rem;
+}
+
+@mixin h1-medium {
+    font-size: 5rem;
+    line-height: 4rem;
+}
+
+@mixin h1-large {
+    font-size: 6rem;
+    line-height: 5rem;
+}
+
+@mixin h2-small {
+    font-size: 2.5rem;
+    line-height: 2rem;
+}
+
+@mixin h2-medium {
+    font-size: 3rem;
+    line-height: 2.5rem;
+}
+
+@mixin h2-large {
+    font-size: 3.5rem;
+    line-height: 3rem;
+}
+
+@mixin h3-small {
+    font-size: 2.25rem;
+    line-height: 2rem;
+}
+
+@mixin h3-medium {
+    font-size: 2.75rem;
+    line-height: 2.5rem;
+}
+
+@mixin h3-large {
+    font-size: 3.25rem;
+    line-height: 3rem;
+}
+
+@mixin h4-small {
+    font-size: 2rem;
+    line-height: 1.5rem;
+}
+
+@mixin h4-medium {
+    font-size: 2.5rem;
+    line-height: 2rem;
+}
+
+@mixin h4-large {
+    font-size: 3rem;
+    line-height: 2.5rem;
+}
+
+@mixin h5-small {
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+}
+
+@mixin h5-medium {
+    font-size: 2rem;
+    line-height: 1.75rem;
+}
+
+@mixin h5-large {
+    font-size: 2.5rem;
+    line-height: 2.25rem;
+}
+
+@mixin h6-small {
+    font-size: 1.25rem;
+    line-height: 1rem;
+}
+
+@mixin h6-medium {
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+}
+
+@mixin h6-large {
+    font-size: 2rem;
+    line-height: 1.75rem;
+}
