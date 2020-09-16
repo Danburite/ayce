@@ -1,9 +1,16 @@
 ﻿@using ButterCMSPage.Controllers
 @using ayce.Models
 
-@{ 
+@{
     ViewBag.Title = "Main";
 }
 
-@Html.Partial("~/Views/Shared/Components/Hero.cshtml")
+@if (Model.Hero != null)
+{
+    @Html.Partial("~/Views/Shared/Components/Hero.cshtml")
+}
+@if (Model.CuisineQuickMenu != null)
+{
+    @Html.Partial("~/Views/Shared/Components/CuisineQuickMenu.cshtml")
+}
 

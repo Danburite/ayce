@@ -1,0 +1,61 @@
+﻿
+.cuisine-menu-component {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.cuisine-menu-title {
+    text-align: center;
+}
+
+.cuisine-menu-item-container {
+    margin: 0 0 0 0;
+}
+
+.cuisine-menu-item {
+    margin-top: 1rem;
+    width: 4rem;
+    text-align: center;
+    height: 10rem;
+    background-color: $white;
+    border: 0.0625rem solid $black;
+    transition: transform .2s;
+}
+
+.cuisine-menu-item:hover {
+    transform: scale(1.25);
+
+    .cuisine-menu-item:not(:hover) {
+        transform: scale(0.75);
+    }
+}
+
+.cuisine-menu-primary-maroon {
+    background-color: $primary-maroon;
+}
+
+.cuisine-menu-black {
+    background-color: $accent-black;
+}
+
+.cuisine-menu-icon-container {
+    margin: auto;
+    margin-top: 1rem;
+    width: 80%;
+    height: 60%;
+    border: 0.0625rem solid $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuisine-menu-icon {
+    max-height: 60%;
+    max-width: 80%;
+}
+
+.cuisine-menu-item-text {
+    color: $black;
+    margin-top: 0.75rem;
+}
