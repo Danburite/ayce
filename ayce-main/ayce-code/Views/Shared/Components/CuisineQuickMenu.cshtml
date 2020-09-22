@@ -13,7 +13,9 @@
         <div class="cell cuisine-menu-item" >
             <a href="https://www.google.com/">
                 <div class="cuisine-menu-icon-container cuisine-menu-@Model.CuisineQuickMenu.Color">
-                    <img class="cuisine-menu-icon" src="@cuisineItems.getIconString()" />
+                    <div class="cuisine-menu-icon">
+                        @Html.Raw(File.ReadAllText(Server.MapPath(@cuisineItems.getIconString())))
+                    </div>
                 </div>
                 <p class="cuisine-menu-item-text">@cuisineItems.MenuTitle</p>
             </a>

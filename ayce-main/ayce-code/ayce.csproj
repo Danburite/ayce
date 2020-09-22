@@ -180,19 +180,25 @@
     <Content Include="Assets\Icons\Logo.svg" />
     <Content Include="Assets\Icons\Media\Github.svg" />
     <Content Include="Assets\Icons\Media\LinkedIn.svg" />
-    <Content Include="Assets\Icons\Stars.svg" />
     <Content Include="Assets\Icons\Food\Sushi.svg" />
     <Content Include="Assets\Icons\Food\Taco.svg" />
+    <Content Include="Assets\Icons\Rating\Five_Star.svg" />
+    <Content Include="Assets\Icons\Rating\Four_Star.svg" />
+    <Content Include="Assets\Icons\Rating\One_Star.svg" />
+    <Content Include="Assets\Icons\Rating\Three_Star.svg" />
+    <Content Include="Assets\Icons\Rating\Two_Star.svg" />
     <Content Include="Assets\Images\logo-90x90.png" />
     <Content Include="Assets\Scripts\foundation-6.6.3.min.js">
       <DependentUpon>foundation-6.6.3.js</DependentUpon>
     </Content>
     <None Include="Assets\Styles\Components\_Hero.scss" />
     <None Include="Assets\Styles\Components\_CuisineQuickMenu.scss" />
+    <None Include="Assets\Styles\Components\_CookingFeed.scss" />
     <Content Include="Assets\Styles\Frameworks\foundation-6.6.3.min.css">
       <DependentUpon>foundation-6.6.3.css</DependentUpon>
     </Content>
     <None Include="Assets\Styles\Main\_Mixins.scss" />
+    <None Include="Assets\Styles\Main\_Footer.scss" />
     <Content Include="Assets\Styles\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -225,6 +231,8 @@
     <Content Include="Views\ButterCMSPage\Dish.cshtml" />
     <Content Include="Views\Shared\Partials\Header.cshtml" />
     <Content Include="Views\Shared\Components\CuisineQuickMenu.cshtml" />
+    <Content Include="Views\Shared\Components\CookingFeed.cshtml" />
+    <Content Include="Views\Shared\Partials\Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

@@ -13,4 +13,9 @@
 {
     @Html.Partial("~/Views/Shared/Components/CuisineQuickMenu.cshtml")
 }
+@if (Model.CookingFeed != null)
+{
+    @Html.Partial("~/Views/Shared/Components/CookingFeed.cshtml")
+}
+
 

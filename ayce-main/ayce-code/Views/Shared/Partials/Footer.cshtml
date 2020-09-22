@@ -1,0 +1,26 @@
+﻿<footer>
+    <div class="footer-container grid-x grid-margin-x">
+        <div class="footer-links cell small-6">
+            <div class="footer-about-page">
+                <p>
+                    <a href="https://google.com">About Us</a>
+                </p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; @DateTime.Now.Year - ayce</p>
+            </div>
+        </div>
+        <div class="footer-social grid-x cell small-6">
+            <div class="footer-github cell small-6">
+                <a href="https://github.com/Danburite">
+                    @Html.Raw(File.ReadAllText(Server.MapPath("~/Assets/Icons/Media/Github.svg")))
+                </a>
+            </div>
+            <div class="footer-linkedin cell small-6">
+                <a href="https://www.linkedin.com/in/sherman-lee-538004156/">
+                    @Html.Raw(File.ReadAllText(Server.MapPath("~/Assets/Icons/Media/LinkedIn.svg")))
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>

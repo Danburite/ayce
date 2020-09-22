@@ -13,7 +13,6 @@ namespace ayce.Models.Pages
         public void copyData(ButterCMS.Models.Page<MainPage> mainPage)
         {
             this.SEO = mainPage.Fields.SEO;
-
             this.Hero = mainPage.Fields.Hero;
             this.CuisineQuickMenu = mainPage.Fields.CuisineQuickMenu;
             this.CookingFeed = mainPage.Fields.CookingFeed;
