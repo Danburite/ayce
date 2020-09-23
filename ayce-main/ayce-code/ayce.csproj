@@ -166,6 +166,7 @@
     <Compile Include="Models\Components\Recipe.cs" />
     <Compile Include="Models\Components\CookingFeed.cs" />
     <Compile Include="Models\Components\Hero.cs" />
+    <Compile Include="Models\Pages\DishFeedPage.cs" />
     <Compile Include="Models\Pages\DishPage.cs" />
     <Compile Include="Models\Pages\MainPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -233,6 +234,7 @@
     <Content Include="Views\Shared\Components\CuisineQuickMenu.cshtml" />
     <Content Include="Views\Shared\Components\CookingFeed.cshtml" />
     <Content Include="Views\Shared\Partials\Footer.cshtml" />
+    <Content Include="Views\ButterCMSPage\DishFeed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />

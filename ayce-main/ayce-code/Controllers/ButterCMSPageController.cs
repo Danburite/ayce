@@ -14,32 +14,79 @@ namespace ButterCMSPage.Controllers
     {
         public ActionResult Main()
         {
-            ButterCMSClientHandler<Pages.MainPage> mainhandler = new ButterCMSClientHandler<Pages.MainPage>("main_page");
-
             var mainModel = new Pages.MainPage();
-            //Modify slugs on CMS to remove - delimiter and change components to accomodate
-            var mainPageList = mainhandler.classType.Data.ToList();
+
+            ButterCMSClientHandler<Pages.MainPage> mainhandler = new ButterCMSClientHandler<Pages.MainPage>();
+
+            mainhandler.modifyToMultiple(mainModel);
+            
+            var mainPageList = mainhandler.pagesClassType.Data.ToList();
             
             mainModel.copyData(mainPageList[0]);
 
             return View(mainModel);
         }
 
-        public ActionResult Dish()
+        [Route("dish/")]
+        public ActionResult DishFeed(string slug)
         {
+            var dishModel = new Pages.DishPage();
+
+            ButterCMSClientHandler<Pages.DishPage> dishFeedHandler = new ButterCMSClientHandler<Pages.DishPage>();
+
+            dishFeedHandler.modifyToMultiple(dishModel);
+
+            var dishFeedModel = new Pages.DishFeedPage();
+
+            dishFeedModel.DishCount = dishFeedHandler.pagesClassType.Meta.Count;
+
+            dishFeedModel.Dishes = new List<Pages.DishPage>();
+            var dishPageList = dishFeedHandler.pagesClassType.Data.ToList();
+
+            foreach (var dish in dishPageList)
+            {
+                var tempDish = new Pages.DishPage();
+
+                tempDish.copyData(dish);
+
+                dishFeedModel.Dishes.Add(tempDish);
+            }
             
-            return View();
+            return View(dishFeedModel);
+        }
+
+        [Route("dish/{slug}")]
+        public ActionResult Dish(string slug)
+        {
+            var dishModel = new Pages.DishPage();
+
+            ButterCMSClientHandler<Pages.DishPage> dishPageHandler = new ButterCMSClientHandler<Pages.DishPage>();
+
+            dishPageHandler.modifyToSingle(dishModel, slug);
+
+            dishModel.copyData(dishPageHandler.pageClassType.Data);
+
+            return View(dishModel);
         }
 
         public class ButterCMSClientHandler<className> where className : class, new()
         {
-            public ButterCMSClientHandler(string slug)
+            public ButterCMSClientHandler()
             {
                 className tempClass = new className();
-                var butterClient = new ButterCMSClient("d185149ebfab8b4ca09538b4bb7fd3c2f7b0a80f");
-                classType = new ButterCMS.Models.PagesResponse<className>();
-                //Dynamically change the "main" to page views
-                classType = butterClient.ListPages<className>(slug, null);
+                butterClient = new ButterCMSClient("d185149ebfab8b4ca09538b4bb7fd3c2f7b0a80f");
+            }
+
+            public void modifyToMultiple(className slugType)
+            {
+                pagesClassType = new ButterCMS.Models.PagesResponse<className>();
+                pagesClassType = butterClient.ListPages<className>(nameToPlug(slugType), null);
+            }
+
+            public void modifyToSingle(className slugType, string slugPage)
+            {
+                pageClassType = new ButterCMS.Models.PageResponse<className>();
+                pageClassType = butterClient.RetrievePage<className>(nameToPlug(slugType), slugPage);
             }
 
             //Implement for component plugs
@@ -70,11 +117,12 @@ namespace ButterCMSPage.Controllers
                         }
                     }
                 }
-
                 return temp.ToString();
             }
 
-            public ButterCMS.Models.PagesResponse<className> classType { get; set; }
+            public ButterCMS.Models.PagesResponse<className> pagesClassType { get; set; }
+            public ButterCMS.Models.PageResponse<className> pageClassType { get; set; }
+            public ButterCMSClient butterClient { get; set; }
 
         }
     }
