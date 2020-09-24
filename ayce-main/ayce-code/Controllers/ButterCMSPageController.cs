@@ -21,8 +21,15 @@ namespace ButterCMSPage.Controllers
             mainhandler.modifyToMultiple(mainModel);
             
             var mainPageList = mainhandler.pagesClassType.Data.ToList();
-            
-            mainModel.copyData(mainPageList[0]);
+
+            try
+            {
+                mainModel.copyData(mainPageList[0]);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
 
             return View(mainModel);
         }
@@ -38,18 +45,25 @@ namespace ButterCMSPage.Controllers
 
             var dishFeedModel = new Pages.DishFeedPage();
 
-            dishFeedModel.DishCount = dishFeedHandler.pagesClassType.Meta.Count;
-
-            dishFeedModel.Dishes = new List<Pages.DishPage>();
-            var dishPageList = dishFeedHandler.pagesClassType.Data.ToList();
-
-            foreach (var dish in dishPageList)
+            try
             {
-                var tempDish = new Pages.DishPage();
+                dishFeedModel.DishCount = dishFeedHandler.pagesClassType.Meta.Count;
 
-                tempDish.copyData(dish);
+                dishFeedModel.Dishes = new List<Pages.DishPage>();
+                var dishPageList = dishFeedHandler.pagesClassType.Data.ToList();
 
-                dishFeedModel.Dishes.Add(tempDish);
+                foreach (var dish in dishPageList)
+                {
+                    var tempDish = new Pages.DishPage();
+
+                    tempDish.copyData(dish);
+
+                    dishFeedModel.Dishes.Add(tempDish);
+                }
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
             }
             
             return View(dishFeedModel);
@@ -64,7 +78,14 @@ namespace ButterCMSPage.Controllers
 
             dishPageHandler.modifyToSingle(dishModel, slug);
 
-            dishModel.copyData(dishPageHandler.pageClassType.Data);
+            try
+            {
+                dishModel.copyData(dishPageHandler.pageClassType.Data);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
 
             return View(dishModel);
         }

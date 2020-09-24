@@ -1,18 +1,18 @@
 ﻿/**/
 
 @mixin h1-small {
-    font-size: 4rem;
-    line-height: 3rem;
+    font-size: 3rem;
+    line-height: 2.5rem;
 }
 
 @mixin h1-medium {
-    font-size: 5rem;
-    line-height: 4rem;
+    font-size: 3.5rem;
+    line-height: 3rem;
 }
 
 @mixin h1-large {
-    font-size: 6rem;
-    line-height: 5rem;
+    font-size: 4rem;
+    line-height: 4rem;
 }
 
 @mixin h2-small {

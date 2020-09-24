@@ -188,6 +188,7 @@
     <Content Include="Assets\Icons\Rating\One_Star.svg" />
     <Content Include="Assets\Icons\Rating\Three_Star.svg" />
     <Content Include="Assets\Icons\Rating\Two_Star.svg" />
+    <Content Include="Assets\Images\butter-b.png" />
     <Content Include="Assets\Images\logo-90x90.png" />
     <Content Include="Assets\Scripts\foundation-6.6.3.min.js">
       <DependentUpon>foundation-6.6.3.js</DependentUpon>
