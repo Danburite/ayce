@@ -16,6 +16,33 @@ namespace ayce.Models.Components
 
     public class CookingFeedItems
     {
+        public string getRatingString()
+        {
+            string path = "";
+            switch (Rating)
+            {
+                case 1:
+                    path = "/Assets/Icons/Rating/One_Star.svg";
+                    break;
+                case 2:
+                    path = "/Assets/Icons/Rating/Two_Star.svg";
+                    break;
+                case 3:
+                    path = "/Assets/Icons/Rating/Three_Star.svg";
+                    break;
+                case 4:
+                    path = "/Assets/Icons/Rating/Four_Star.svg";
+                    break;
+                case 5:
+                    path = "/Assets/Icons/Rating/Five_Star.svg";
+                    break;
+                default:
+                    path = "~/Assets/Icons/Rating/Five_Star.svg";
+                    break;
+            }
+
+            return path;
+        }
         public string DishTitle { get; set; }
         public string ImgUrl { get; set; }
         public int Rating { get; set; }

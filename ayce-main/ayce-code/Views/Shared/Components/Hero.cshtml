@@ -3,7 +3,7 @@
 
 <div class="grid-x hero-component">
     <div class="cell">
-        <div class="hero-background-image" style="background-image: url(@Model.Hero.ImgUrl);">
+        <div class="hero-background-image" style="background-image: url(@Model.Hero.ImgUrl); @((Model.Hero.Parallax) ? "background-attachment: fixed" : "" )">
             <div class="hero-text">
                 <div class="hero-headline-text">
                     <h1>@Model.Hero.Headline</h1>

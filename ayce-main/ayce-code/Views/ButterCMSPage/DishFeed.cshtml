@@ -1,0 +1,24 @@
+﻿@using ButterCMSPage.Controllers
+@using ayce.Models
+
+@{
+    ViewBag.Title = "Dish Feed";
+}
+
+<div class="dish-feed-page">
+    <div class="dish-feed-dishes grid-x">
+        @foreach (var dish in Model.Dishes)
+        {
+        <div class="dish-feed-item cell grid-x">
+            <div class="dish-feed-name">
+                <a href="/dish/@dish.Slug">
+                    @dish.DishTitle
+                </a>
+            </div>
+            <div>
+                <img src="@dish.DishImage" />
+            </div>
+        </div>
+        }
+    </div>
+</div>

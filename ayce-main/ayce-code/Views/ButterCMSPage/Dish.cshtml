@@ -1,11 +1,22 @@
-﻿<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+﻿@using ButterCMSPage.Controllers
+@using ayce.Models
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+@{
+    ViewBag.Title = Model.DishTitle;
+}
+
+<div class="dish-page">
+    <div class="dish-title">
+        <h1>@Model.DishTitle</h1>
+    </div>
+    <div class="dish-rating">
+        @Html.Raw(File.ReadAllText(Server.MapPath(@Model.getRatingString())))
+    </div>
+    <div class="dish-cuisine">
+        Cuisine: @Model.DishCuisine
+    </div>
+    <div>
+        <img src="@Model.DishImage"/>
+    </div>
+
+</div>

@@ -10,12 +10,12 @@ namespace ayce.Models.Pages
 {
     public class MainPage
     {
-        public void copyData(ButterCMS.Models.PageResponse<MainPage> mainPage)
+        public void copyData(ButterCMS.Models.Page<MainPage> mainPage)
         {
-            this.SEO = mainPage.Data.Fields.SEO;
-            this.Hero = mainPage.Data.Fields.Hero;
-            this.CuisineQuickMenu = mainPage.Data.Fields.CuisineQuickMenu;
-            this.CookingFeed = mainPage.Data.Fields.CookingFeed;
+            this.SEO = mainPage.Fields.SEO;
+            this.Hero = mainPage.Fields.Hero;
+            this.CuisineQuickMenu = mainPage.Fields.CuisineQuickMenu;
+            this.CookingFeed = mainPage.Fields.CookingFeed;
         }
 
         public Seo SEO { get; set; }

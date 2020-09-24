@@ -1,0 +1,34 @@
+﻿@using ayce.Models.Components
+
+<div class="cooking-feed-component">
+    @if (Model.CookingFeed.FeedTitle != "")
+    {
+    <div class="cooking-feed-title">
+        <h2>@Model.CookingFeed.FeedTitle</h2>
+    </div>
+    }
+    <div class="cooking-feed-item-container grid-x">
+        @foreach (var cookingItems in Model.CookingFeed.CookingFeedItemList)
+        {
+        <div class="cooking-feed-item cell grid-x">
+            <div class="cooking-feed-image-container cell small-8 ">
+                <img class="cooking-feed-image" src="@cookingItems.ImgUrl"/>
+            </div>
+            <div class="cooking-feed-info-container cell small-4">
+                <div class="cooking-feed-info">
+                    <div class="cooking-feed-item-title">
+                        <h3><a href="https://www.google.com/">@cookingItems.DishTitle</a></h3>
+                    </div>
+                    <div class="cooking-feed-item-rating">
+                        @Html.Raw(File.ReadAllText(Server.MapPath(cookingItems.getRatingString())))
+                    </div>
+                    <div class="cooking-feed-item-description">
+                        <p>@cookingItems.Description</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+
+</div>
