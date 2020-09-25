@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "deployments": {
+    "msDeploy": [
+      {
+        "name": "ayce",
+        "parameters": {
+          "appBundle": "ayce.zip",
+          "iisPath": "/"
+        }
+      }
+    ]
+  }
+}
