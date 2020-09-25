@@ -9,14 +9,31 @@
     <div class="dish-title">
         <h1>@Model.DishTitle</h1>
     </div>
-    <div class="dish-rating">
-        @Html.Raw(File.ReadAllText(Server.MapPath(@Model.getRatingString())))
-    </div>
-    <div class="dish-cuisine">
-        Cuisine: @Model.DishCuisine
-    </div>
     <div>
-        <img src="@Model.DishImage"/>
+        <div class="dish-rating">
+            @Html.Raw(File.ReadAllText(Server.MapPath(@Model.getRatingString())))
+        </div>
+    </div>
+    <div class="dish-img-desc-container grid-x">
+        <div class="cell large-6">
+            <div class="dish-image-container ">
+                <div class="dish-image">
+                    <img src="@Model.DishImage" />
+                </div>
+            </div>
+        </div>
+        <div class="cell large-6">
+            <div class="dish-information-container">
+                <div class="dish-cuisine">
+                    <h2>Cuisine</h2>
+                    <p>@Model.DishCuisine</p>
+                </div>
+                <div class="dish-description">
+                    <h2>Description</h2>
+                    <p>@Model.DishDescription</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>

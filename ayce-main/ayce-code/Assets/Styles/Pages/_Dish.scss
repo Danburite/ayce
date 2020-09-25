@@ -1,0 +1,54 @@
+﻿.dish-page {
+
+}
+
+.dish-title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.dish-rating {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.dish-img-desc-container {
+}
+
+.dish-image-container {
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    background-color: $primary-maroon;
+}
+
+.dish-image {
+    width: 100%;
+}
+
+.dish-information-container {
+    width: 80%;
+    margin-left: 2rem;
+    text-align: left;
+}
+
+.dish-cuisine {
+    padding: 1rem 0 1rem 0;
+    margin-bottom: 1rem;
+
+    h2 {
+           text-align: left;
+           margin-bottom: 1rem;
+       }
+}
+
+.dish-description {
+    padding: 1rem 0 1rem 0;
+    margin-bottom: 1rem;
+    
+    h2 {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+}
