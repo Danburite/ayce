@@ -237,6 +237,7 @@
     <Content Include="Views\Shared\Components\CookingFeed.cshtml" />
     <Content Include="Views\Shared\Partials\Footer.cshtml" />
     <Content Include="Views\ButterCMSPage\DishFeed.cshtml" />
+    <Content Include="Views\Shared\Components\Recipe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
@@ -262,7 +263,7 @@
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\VisualStudio\v14.0</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
