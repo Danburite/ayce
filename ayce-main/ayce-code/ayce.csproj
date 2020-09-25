@@ -201,6 +201,7 @@
     </Content>
     <None Include="Assets\Styles\Main\_Mixins.scss" />
     <None Include="Assets\Styles\Main\_Footer.scss" />
+    <None Include="Assets\Styles\Pages\_Dish.scss" />
     <Content Include="Assets\Styles\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
