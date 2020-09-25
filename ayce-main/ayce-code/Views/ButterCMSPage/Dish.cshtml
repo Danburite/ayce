@@ -9,10 +9,8 @@
     <div class="dish-title">
         <h1>@Model.DishTitle</h1>
     </div>
-    <div>
-        <div class="dish-rating">
-            @Html.Raw(File.ReadAllText(Server.MapPath(@Model.getRatingString())))
-        </div>
+    <div class="dish-rating">
+        @Html.Raw(File.ReadAllText(Server.MapPath(@Model.getRatingString())))
     </div>
     <div class="dish-img-desc-container grid-x">
         <div class="cell large-6">
@@ -34,6 +32,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="dish-recipe-container">
+
     </div>
 
 </div>
